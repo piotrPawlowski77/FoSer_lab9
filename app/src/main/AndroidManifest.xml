@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.foser">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <service android:name=".MyForegroundService"
+            android:enabled="true">
+        </service>
 
         <activity android:name=".MainActivity"
             android:label="@string/app_name">
@@ -25,6 +31,8 @@
             android:label="@string/label_settings">
 
         </activity>
+
+
 
     </application>
 
